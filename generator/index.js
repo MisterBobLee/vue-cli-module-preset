@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = (api, options, rootOptions) => {
   const projectName = rootOptions.projectName
 
@@ -18,28 +20,39 @@ module.exports = (api, options, rootOptions) => {
       vue: '^3.2.13',
     },
     devDependencies: {
-      'app-plugin': 'latest',
+      'app-plugin': '*',
       'element-plus': '2.3.14',
-      '@element-plus/icons-vue': '^2.1.0',
       pug: '3.0.3',
       'pug-plain-loader': '1.1.0',
       sass: '1.62.0',
       'sass-loader': '13.2.2',
     },
-    publishConfig: {
-      registry: 'http://10.40.192.217:4873',
+    eslintConfig: {
+      root: true,
+      env: { node: true },
+      extends: ['plugin:vue/vue3-essential', 'eslint:recommended'],
+      parserOptions: { parser: '@babel/eslint-parser' },
     },
+    browserslist: ['> 1%', 'last 2 versions', 'not dead', 'not ie 11'],
   })
 
-  // 2. 渲染模板檔案 (傳入 projectName 供 .env 使用)
   api.render('./template', {
     projectName: projectName,
   })
 
-  // 3. 刪除預設檔案
   api.render((files) => {
     delete files['src/assets/logo.png']
     delete files['src/components/HelloWorld.vue']
-    // 你的 App.vue 和 main.js 會被 template 裡的直接蓋掉，所以不用刪
+  })
+
+  api.onCreateComplete(() => {
+    const folders = ['src/api', 'src/assets/img', 'src/views/pages']
+
+    folders.forEach((folder) => {
+      const filePath = api.resolve(`${folder}/.gitkeep`)
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath)
+      }
+    })
   })
 }

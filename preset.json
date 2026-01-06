@@ -1,5 +1,7 @@
 {
-  "useConfigFiles": true,
+  "useConfigFiles": false,
+  "vueVersion": "3",
+  "cssPreprocessor": "sass",
   "plugins": {
     "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-eslint": {
@@ -7,6 +9,5 @@
       "lintOn": ["save"]
     }
   },
-  "vueVersion": "3",
-  "cssPreprocessor": "sass"
+  "./vue-cli-plugin-preset": {}
 }
