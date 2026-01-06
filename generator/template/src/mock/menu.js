@@ -5,7 +5,7 @@ const menuList = [
   //   superuser_only: false,
   //   title: '頁籤標題',
   //   path: '/檔案路徑',
-  //   icon: 'el-icon-bangzhu',
+  //   icon: 'el-icon-plus', // 頁籤圖示
   //   menu_type: 2,
   //   open_type: 1,
   //   parent_id: 0,
