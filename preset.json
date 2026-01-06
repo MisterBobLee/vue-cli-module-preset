@@ -9,5 +9,5 @@
       "lintOn": ["save"]
     }
   },
-  "./vue-cli-plugin-preset": {}
+  "./vue-cli-module-preset": {}
 }
