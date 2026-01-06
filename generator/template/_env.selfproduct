@@ -1,0 +1,9 @@
+## 環境名稱
+VUE_APP_NAME=SELFPRODUCT
+## 預設頁面
+VUE_APP_RESET_PATH=/login
+## 環境專案根目錄
+VUE_APP_BASE_URL=/<%= projectName %>/
+## menu Page
+VUE_APP_MENU_PAGE=/
+NODE_ENV=production

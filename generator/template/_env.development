@@ -1,0 +1,6 @@
+## 環境名稱
+VUE_APP_NAME=DEVELOPMENT
+## 預設頁面
+VUE_APP_RESET_PATH=/login
+## 環境專案根目錄
+VUE_APP_BASE_URL=/

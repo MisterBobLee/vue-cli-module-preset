@@ -1,0 +1,5 @@
+## 分頁標題
+
+VUE_APP_TITLE=<%= projectName %>
+VUE_APP_CODE=<%= projectName %>
+VUE_APP_WITHOUT_PERMISSION=false
