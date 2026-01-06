@@ -1,4 +1,4 @@
-# fukuta
+# <%= projectName %>
 
 ## Project setup
 
