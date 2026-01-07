@@ -32,6 +32,7 @@ module.exports = (api, options, rootOptions) => {
       env: { node: true },
       extends: ['plugin:vue/vue3-essential', 'eslint:recommended'],
       parserOptions: { parser: '@babel/eslint-parser' },
+      rules: {},
     },
     browserslist: ['> 1%', 'last 2 versions', 'not dead', 'not ie 11'],
   })

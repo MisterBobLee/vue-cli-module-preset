@@ -24,7 +24,7 @@ module.exports = defineConfig({
         },
       },
       '/authcoreapi/': {
-        target: 'http://10.11.233.86:8000/',
+        target: 'http://10.11.233.81:8000/',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
